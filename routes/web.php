@@ -39,7 +39,7 @@ Route::get('/comics/{comic}', 'ComicController@show')->name('comics.show');
 
 
 
-//Route::post('/comics', 'ComicController@store')->name('comics.store');
+Route::post('/comics', 'ComicController@store')->name('comics.store');
 
 
 //Route::get('/comics/{comic}', 'ComicController@show')->name('comics.show');

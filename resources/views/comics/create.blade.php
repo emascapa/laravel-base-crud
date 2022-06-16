@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <form action="" method="post"> {{-- {{route('comics.store')}} --}}
+    <form action="{{route('comics.store')}}" method="post"> {{-- {{route('comics.store')}} --}}
 
         @csrf
     
