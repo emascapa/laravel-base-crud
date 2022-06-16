@@ -16,8 +16,8 @@
 
         <header class="py-4 bg-dark text-light">
             <nav class="nav justify-content-center">
-              <a class="nav-link" href="{{route('games.index')}}">Comics</a>
-              <a class="nav-link" href="{{route('games.create')}}">Create</a>
+              <a class="nav-link" href="{{route('comics.index')}}">Comics</a>
+              <a class="nav-link" href="{{route('comics.create')}}">Create</a>
               <a class="nav-link disabled" href="#">Disabled link</a>
             </nav>
         </header>
