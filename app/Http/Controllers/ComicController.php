@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comic;
+use App\Http\Requests\ComicRequest;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -36,13 +37,13 @@ class ComicController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\ComicRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
         //Inserisco un controllo validazione per loggare poi a schermo gli eventuali errori
-        $request->validate([
+/*         $request->validate([
             'title' => 'required|max:255',
             'description' => 'nullable',
             'thumb' => 'required',
@@ -50,7 +51,10 @@ class ComicController extends Controller
             'series' => 'nullable',
             'sale_date' => 'nullable',
             'type' => 'required|max:255'
-        ]);
+        ]); */
+
+        //esperimento validation tramite ComicRequest
+        $data = $request->validated();
 
 
 
@@ -88,14 +92,14 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\ComicRequest  $request
      * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic)
     {
         //
-        $request->validate([
+/*         $request->validate([
             'title' => 'required|max:255',
             'description' => 'nullable',
             'thumb' => 'required',
@@ -103,7 +107,10 @@ class ComicController extends Controller
             'series' => 'nullable',
             'sale_date' => 'nullable',
             'type' => 'required|max:255'
-        ]);
+        ]); */
+
+        //esperimento validation tramite ComicRequest
+        $data = $request->validated();
 
 
 
