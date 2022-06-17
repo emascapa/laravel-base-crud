@@ -59,7 +59,7 @@
 
                                                 @method('DELETE')
 
-                                                <button class="btn btn-danger" type="submit">Eliminami</button>
+                                                <button class="btn btn-danger" type="submit">Delete</button>
 
                                             </form>
                                         </div>
