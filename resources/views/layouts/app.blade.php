@@ -11,6 +11,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+        <script src="https://kit.fontawesome.com/ac7715c080.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -30,5 +32,6 @@
             Awesome Footer &copy;
         </footer>
 
+        <script src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
