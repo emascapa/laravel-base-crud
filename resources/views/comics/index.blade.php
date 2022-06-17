@@ -24,6 +24,15 @@
                     <a href="{{route('comics.show', $comic->id)}}">View more</a>
 
                     <a href="{{route('comics.edit', $comic->id)}}">Edit comic</a>
+
+                    <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                        @csrf
+
+                        @method('DELETE')
+
+                        <button type="submit">Eliminami</button>
+                        
+                    </form>
                 </div>
             </div>
         </div>
