@@ -29,6 +29,7 @@ class ComicController extends Controller
     public function create()
     {
         //
+        
         return view('comics.create');
     }
 
@@ -40,7 +41,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Inserisco un controllo validazione per loggare poi a schermo gli eventuali errori
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'nullable',
+            'thumb' => 'required',
+            'price' => 'required',
+            'series' => 'nullable',
+            'sale_date' => 'nullable',
+            'type' => 'required|max:255'
+        ]);
+
+
+
         $data = $request->all();
         Comic::create($data);
 
