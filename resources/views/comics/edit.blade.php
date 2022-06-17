@@ -15,11 +15,11 @@
                 </ul>
             </div>
         @endif
+        
+        <h2 class="text-center mb-5">You are editing the comic "{{ $comic->title }}"</h2>
 
+        <form action="{{ route('comics.update', $comic->id) }}" method="post"> {{-- {{ route('comics.update', $comic->id) }} --}}
 
-        <form action="" method="post"> {{-- {{ route('comics.update', $comic->id) }} --}}
-
-            <h2 class="text-center mb-5">You are editing the comic "{{ $comic->title }}"</h2>
 
             @csrf
 

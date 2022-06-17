@@ -42,3 +42,6 @@ Route::get('/comics/{comic}', 'ComicController@show')->name('comics.show');
 
 Route::get('/comics/{comic}/edit', 'ComicController@edit')->name('comics.edit');
 
+Route::put('/comics/{comic}', 'ComicController@update')->name('comics.update');
+
+

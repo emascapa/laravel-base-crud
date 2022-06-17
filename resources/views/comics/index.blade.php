@@ -22,6 +22,8 @@
                     <p>Price: {{$comic->price}} $</p>
 
                     <a href="{{route('comics.show', $comic->id)}}">View more</a>
+
+                    <a href="{{route('comics.edit', $comic->id)}}">Edit comic</a>
                 </div>
             </div>
         </div>
